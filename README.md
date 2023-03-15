@@ -1,5 +1,7 @@
 # API from simple todo app
 
+  [deploy project](https://cloud.amvera.ru/projects/py-todo-api)
+
 ## Описание АПИ
 
 Каждая заметка будет определяться следующим образом:
