@@ -13,7 +13,7 @@
 
 ## API
 
-GET /todo получает список всех TODO.
-GET /todo/<id> получает TODO с заданным id (индексом в массиве).
-POST /todo добавляет новую TODO в конец списка.
-PUT /todo/<id> заменяет TODO с заданным id.
++ GET /todo получает список всех TODO.
++ GET /todo/<id> получает TODO с заданным id (индексом в массиве).
++ POST /todo добавляет новую TODO в конец списка.
++ PUT /todo/<id> заменяет TODO с заданным id.
