@@ -46,12 +46,8 @@ def add_new_todo():
 
 @app.route("/todo", methods=["DELETE"])
 def delete_todo():
-   data = get_data()
-   todo_write = request.json
-   if todo_write is None:
-       abort(400)
-   data.remove(todo_write)
-   save_data(data)
+   '''просто удаляем весь список'''
+   save_data([])
    return "OK"
    
 @app.route("/todo/<int:id>", methods=["PUT"])
