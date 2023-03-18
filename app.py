@@ -36,8 +36,6 @@ def get_single_todo(id):
 
 @app.route("/todo", methods=["POST"])
 def add_new_todo():
-   
-   print(request.json)
    new_todo = request.json
    if new_todo is None:
        abort(400)
@@ -45,6 +43,16 @@ def add_new_todo():
    data.append(new_todo)
    save_data(data)
    return "OK", 201
+
+@app.route("/todo", methods=["DELETE"])
+def delete_todo():
+   data = get_data()
+   todo_write = request.json
+   if todo_write is None:
+       abort(400)
+   data.remove(todo_write)
+   save_data(data)
+   return "OK"
    
 @app.route("/todo/<int:id>", methods=["PUT"])
 def update_todo(id):
